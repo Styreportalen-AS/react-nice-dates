@@ -1,21 +1,21 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 
 export default function useDetectTouch() {
-  const [isTouch, setIsTouch] = useState(false)
+    const [isTouch, setIsTouch] = useState(false);
 
-  useEffect(() => {
-    const handleTouch = () => {
-      setIsTouch(true)
-      removeListener()
-    }
+    useEffect(() => {
+        const handleTouch = () => {
+            setIsTouch(true);
+            removeListener();
+        };
 
-    const removeListener = () => {
-      document.removeEventListener('touchstart', handleTouch)
-    }
+        const removeListener = () => {
+            document.removeEventListener('touchstart', handleTouch);
+        };
 
-    document.addEventListener('touchstart', handleTouch)
-    return removeListener
-  }, [])
+        document.addEventListener('touchstart', handleTouch);
+        return removeListener;
+    }, []);
 
-  return isTouch
+    return isTouch;
 }
