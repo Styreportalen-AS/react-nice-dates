@@ -1,4 +1,4 @@
-declare module "react-nice-dates" {
+declare module "@hennber/react-nice-dates" {
   import * as React from "react";
   import * as Locale from "date-fns";
 
@@ -96,7 +96,7 @@ declare module "react-nice-dates" {
   export function DateRangePickerCalendar(
     props: DateRangePickerCalendarProps
   ): JSX.Element;
-  
+
   export function useDateInput({
     date,
     format,
